@@ -1,0 +1,22 @@
+/* 상단배너 */
+#hdBanner {width:100%;position: relative;}
+#hdBanner img {width: 100%;}
+#hdBanner img.mImg {display: none;}
+#hdBanner .closeBtn {position: absolute;bottom: -29px;right: 3px;padding: 5px 7px; background:rgb(0, 0, 0,0.3);border-radius:7px;}
+#hdBanner .closeBtn .pHClose {margin-left: 5px;}
+#hdBanner .closeBtn .pHClose img {width: 16px;vertical-align: top;}
+#hdBanner .closeBtn .aHClose {display: inline-block;}
+#hdBanner .closeBtn .aHClose label {font-size: 13px;color: #fff;line-height: 16px;}
+
+
+
+@media all and (max-width:767px){
+	/* 200129 */
+	/* 상단배너 */
+	#hdBanner img.pcImg {display: none;}
+	#hdBanner img.mImg {display: block;}
+	#hdBanner .closeBtn {padding:2px 5px;bottom: 3px;right: 12px;border-radius: 5px;}
+	#hdBanner .closeBtn .pHClose {margin-left: 10px;}
+	#hdBanner .closeBtn .pHClose img {width: 11px;vertical-align: middle;}
+	#hdBanner .closeBtn .aHClose label {font-size: 11px;line-height: 18px;}
+}
