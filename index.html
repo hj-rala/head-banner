@@ -35,17 +35,24 @@ location.href=url_link;
 	<img src="../images/img/img_header_pop.jpg" alt="신종 코로나바이러스감염증 예방행동수칙: 1.마스크착용-대중교통이용,공공장소 방문 시 필수! 2.손씻기(청결)-30초이상 충분히 비누로 씻어요! 3.기침예절-기침은 옷소매로 가리고하세요!. (문의:관할보건소/1339/120)" class="pcImg">
 	<img src="../images/img/img_header_pop_m.jpg" alt="신종 코로나바이러스감염증 예방행동수칙: 1.마스크착용-대중교통이용,공공장소 방문 시 필수! 2.손씻기(청결)-30초이상 충분히 비누로 씻어요! 3.기침예절-기침은 옷소매로 가리고하세요!. (문의:관할보건소/1339/120)" class="mImg">
 	<div class="closeBtn">
-		<a href="javascript:void(closeWin('hdBanner','hdBanner'));" onclick="closeWin('hdBanner','hdBanner');" class="aHClose">오늘 하루 보지 않기</a>
+		<div class="aHClose">
+			<input type="checkbox"  id="chk1" name="chk1" />
+			<label for="chk1">오늘 하루 보지 않기</label>
+		</div>
 		<a href="javascript:;" class="pHClose"><img src="../images/btn/btn_white_close.png" alt="닫기" /></a>
 	</div>
 </div>
 <script type="text/javascript">
-    if (getCookies1("hdBanner") != "done") {
-        document.getElementById('hdBanner').style.display = 'block';
-    }
+	if (getCookies1("hdBanner") != "done") {
+		document.getElementById('hdBanner').style.display = 'block';
+	}
 	$(document).ready(function() {
-		$('.pHClose, .aHClose').click(function(){
-			$('#hdBanner').slideUp();
+		$('.pHClose').click(function(){
+			if ($("input:checkbox[id='chk1']").is(":checked") == true) {
+				closeWin('hdBanner','hdBanner');
+			} else {
+				$('#hdBanner').slideUp();
+			}
 		});
 	});
 </script>
