@@ -8,7 +8,8 @@ function closeWin(objname,pop) {
  var expdate = new Date();
   expdate.setTime(expdate.getTime() + 24*60*60*1000 ); // *365 365일
  setCookies1( pop, "done" , expdate );
-document.getElementById(objname).style.display = "none";
+ //document.getElementById(objname).style.display = "none";
+ $('#hdBanner').slideUp();
 }
 
 function getCookies1(Name) {
